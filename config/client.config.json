@@ -1,0 +1,25 @@
+{
+    "tags": {
+        "allowUnknownTags": true,
+        "dictionaries": ["jsdoc","closure"]
+    },
+    "source": {
+        "include" :["client/src/components/pages", "client/src/alt", "client/scripts"],
+        "includePattern": ".+\\.js?$",
+        "includePattern": ".+\\.jsx?$",
+        "excludePattern": "(^|\\/|\\\\)_"
+    },
+    "plugins": ["./QA/jsdoc/plugins/ignore"],
+    "templates": {
+        "cleverLinks": false,
+        "monospaceLinks": false,
+         "default":{
+            "useLongnameInNav": true
+        }
+    },
+    "opts": {
+        "recurse" : true,
+        "destination": "./QA/jsdoc/client",
+        "template": "./node_modules/docdash"
+    }
+}
